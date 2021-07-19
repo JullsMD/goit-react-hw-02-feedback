@@ -1,5 +1,5 @@
 .button {
-  margin: 5px;
+  margin: 10px;
   width: 100px;
   height: 50px;
 
@@ -9,12 +9,12 @@
   font-weight: bolder;
 
   cursor: pointer;
-  background-color: #fff;
-  border: 3px solid #000;
+  background-color: var(--secondary-bgc);
+  border: 3px solid var(--text-color);
   border-radius: 5%;
 }
 
 .button:hover {
-  background-color: rgba(123, 152, 172, 0.788);
-  color: white;
+  background-color: var(--main-bgc);
+  color: var(--secondary-bgc);
 }

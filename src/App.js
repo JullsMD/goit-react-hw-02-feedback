@@ -1,10 +1,11 @@
-import React from 'react';
-import Section from './Components/Section';
+import React, { Component } from 'react';
+import Container from './Components/Container';
+import Controls from './Components/Controls/Controls';
 import FeedbackOptions from './Components/FeedbackOptions';
 import Title from './Components/Title';
 import Statistics from './Components/Statistics';
 
-class App extends React.Component {
+class App extends Component {
   state = {
     good: 0,
     neutral: 0,
@@ -12,9 +13,7 @@ class App extends React.Component {
   };
 
   incrementFeedback = option => {
-    this.setState(prevState => {
-      return { [option]: prevState[option] + 1 };
-    });
+    this.setState(prevState => ({ [option]: prevState[option] + 1 }));
   };
 
   countTotalFeedback = () => {
@@ -35,16 +34,17 @@ class App extends React.Component {
     const total = this.countTotalFeedback();
     const positivePercentage = this.countPositiveFeedbackPercentage();
     return (
-      <Section>
+      <Container>
         <Title title="Please, leave your feedback" />
-
-        {options.map(item => (
-          <FeedbackOptions
-            key={item}
-            option={item}
-            onLeaveFeedback={this.incrementFeedback}
-          />
-        ))}
+        <Controls>
+          {options.map(item => (
+            <FeedbackOptions
+              key={item}
+              option={item}
+              onLeaveFeedback={this.incrementFeedback}
+            />
+          ))}
+        </Controls>
         <Statistics
           good={good}
           bad={bad}
@@ -52,7 +52,7 @@ class App extends React.Component {
           total={total}
           positivePercentage={positivePercentage}
         />
-      </Section>
+      </Container>
     );
   }
 }
