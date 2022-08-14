@@ -1,0 +1,20 @@
+.button {
+  margin: 10px;
+  width: 100px;
+  height: 50px;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 13px;
+  line-height: 0.7;
+  font-weight: bolder;
+
+  cursor: pointer;
+  background-color: var(--secondary-bgc);
+  border: 3px solid var(--text-color);
+  border-radius: 5%;
+}
+
+li:hover .button{
+  background-color: var(--main-bgc);
+  color: var(--secondary-bgc);
+}

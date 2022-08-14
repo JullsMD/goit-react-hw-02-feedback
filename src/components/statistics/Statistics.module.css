@@ -1,0 +1,9 @@
+.statistics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.statistics li {
+  margin-left: 6px;
+}
