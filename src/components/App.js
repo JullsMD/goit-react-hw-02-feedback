@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import Container from './container/Container';
-import Title from './title/Title';
-import Controls from './controls/Controls';
-import FeedbackOptions from './feedbackOptions/FeedbackOptions';
-import Statistics from './statistics/Statistics';
+import Container from './container';
+import Title from './title';
+import Controls from './controls';
+import FeedbackOptions from './feedbackOptions';
+import Statistics from './statistics';
 
 class App extends Component {
   state = {
